@@ -20,6 +20,12 @@ This repository contains my solutions and exercises as I prepare for the **42 Pi
 | C05 | ✅ |
 | C06 | ✅ |
 | C07 | ✅ |
+| Exam00 | ✅ |
+| Exam01 | ✅ |
+| Exam02 | ✅ |
+| Exam03 | ✅ |
+| Exam04 | ✅ |
+| Exam05 | ✅ |
 
 ---
 
