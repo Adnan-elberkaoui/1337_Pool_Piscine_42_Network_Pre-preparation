@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ex00_ft_putchar.c                                  :+:      :+:    :+:   */
+/*   Ex00_ft_strcpy.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cypher <cypher@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/28 19:45:13 by marvin            #+#    #+#             */
-/*   Updated: 2026/06/29 00:14:27 by cypher           ###   ########.fr       */
+/*   Created: 2026/06/29 17:11:29 by cypher            #+#    #+#             */
+/*   Updated: 2026/06/29 17:12:33 by cypher           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void ft_putchar(char c)
+char *ft_strcpy(char *dest, char *src)
 {
-    write(1,&c,1);
-}
+    int i ;
+    i = 0 ;
 
-int main (void)
-{
-    ft_putchar(1 + '0');
-    ft_putchar('\n');
-    return 0;
+    while(src[i])
+    {
+        dest[i] = src[i];
+        i++;
+    }
+    dest[i] = '\0';
+
+    return dest ;
 }

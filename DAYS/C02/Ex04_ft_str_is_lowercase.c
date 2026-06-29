@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ex00_ft_putchar.c                                  :+:      :+:    :+:   */
+/*   Ex04_ft_str_is_lowercase.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cypher <cypher@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/28 19:45:13 by marvin            #+#    #+#             */
-/*   Updated: 2026/06/29 00:14:27 by cypher           ###   ########.fr       */
+/*   Created: 2026/06/29 17:11:43 by cypher            #+#    #+#             */
+/*   Updated: 2026/06/29 17:12:39 by cypher           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void ft_putchar(char c)
+int ft_str_is_lowercase(char *str)
 {
-    write(1,&c,1);
-}
+    int i ;
+    i = 0 ;
 
-int main (void)
-{
-    ft_putchar(1 + '0');
-    ft_putchar('\n');
-    return 0;
+    while(str[i])
+    {
+        if(!(str[i] >= 'a' && str[i] <= 'z'))
+        {
+            return 0;
+        }
+     i++;
+    }
+    return 1;
 }
