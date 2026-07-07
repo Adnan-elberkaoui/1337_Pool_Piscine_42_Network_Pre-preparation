@@ -6,7 +6,7 @@
 /*   By: cypher <cypher@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/06 19:04:32 by cypher            #+#    #+#             */
-/*   Updated: 2026/07/07 16:05:11 by cypher           ###   ########.fr       */
+/*   Updated: 2026/07/07 16:12:55 by cypher           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,14 +84,3 @@ void *ft_print_memory(void *addr, unsigned int size)
        
 }
 
-
-int main(void){
-
-    char str[] = "Couco\\nnu\ntu vas \r-42 bien\b ajskd\n\n\n\n\njoiws sk\rdf aso odkowa  dsgjfdks]n\n\r\r ?";
-    unsigned int size;
-
-    size = sizeof(str) - 1;
-    ft_print_memory(str,size);
-    
-    return (0);
-} 
