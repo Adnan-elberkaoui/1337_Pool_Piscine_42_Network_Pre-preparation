@@ -1,41 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ex07_ft_putnbr.c                                   :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cypher <cypher@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/28 19:46:45 by cypher            #+#    #+#             */
-/*   Updated: 2026/06/28 19:46:46 by cypher           ###   ########.fr       */
+/*   Created: 2026/07/11 22:21:44 by cypher            #+#    #+#             */
+/*   Updated: 2026/07/11 22:39:44 by cypher           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int ft_fibonacci(int index)
 {
-	write(1, &c, 1);
+	if (index < 0)
+    	return (-1);
+	if (index == 0)
+    	return (0);
+	if (index == 1)
+    	return (1);
+	return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
 }
 
-void	ft_putnbr(int nb)
-{
-	if (nb == -2147483648)
-	{
-		write(1, "-2147483648", 11);
-		return ;
-	}
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nb = -nb;
-	}
-	if (nb >= 10)
-		ft_putnbr(nb / 10);
-	ft_putchar((nb % 10) + '0');
-}
-
-int main (void)
-{
-    ft_putnbr(42);
-    return 0 ;
-}

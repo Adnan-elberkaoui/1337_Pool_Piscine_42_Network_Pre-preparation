@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ex02_ft_print_reverse_alphabet.c                   :+:      :+:    :+:   */
+/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cypher <cypher@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/28 19:46:31 by cypher            #+#    #+#             */
-/*   Updated: 2026/06/28 19:46:32 by cypher           ###   ########.fr       */
+/*   Updated: 2026/07/10 02:21:29 by cypher           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_print_reverse_alphabet(void)
+void	ft_print_reverse_alphabet(void)
 {
-    char i ;
-    i = "z";
+	char	i;
 
-    while(i >= "a")
-    {
-        write(1,&i,1);
-        i--;
-    }
-    
+	i = "z";
+	while (i >= "a")
+	{
+		write(1, &i, 1);
+		i--;
+	}
 }

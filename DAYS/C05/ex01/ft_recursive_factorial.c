@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ex00_ft_putchar.c                                  :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cypher <cypher@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/28 19:45:13 by marvin            #+#    #+#             */
-/*   Updated: 2026/06/29 00:14:27 by cypher           ###   ########.fr       */
+/*   Created: 2026/07/11 17:58:15 by cypher            #+#    #+#             */
+/*   Updated: 2026/07/11 18:04:51 by cypher           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void ft_putchar(char c)
+int ft_recursive_factorial(int nb)
 {
-    write(1,&c,1);
-}
+	if (nb < 0)
+    	return (0);
 
-int main (void)
-{
-    ft_putchar(1 + '0');
-    ft_putchar('\n');
-    return 0;
+	if (nb == 0 || nb == 1)
+   		return (1);
+	
+	return (nb * ft_recursive_factorial(nb - 1));
 }
