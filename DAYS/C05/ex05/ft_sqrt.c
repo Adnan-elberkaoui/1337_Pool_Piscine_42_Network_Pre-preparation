@@ -6,7 +6,7 @@
 /*   By: cypher <cypher@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/11 22:55:41 by cypher            #+#    #+#             */
-/*   Updated: 2026/07/12 01:47:00 by cypher           ###   ########.fr       */
+/*   Updated: 2026/07/13 19:16:14 by cypher           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int ft_sqrt(int nb)
 // 		return 0;
 // 	return ft_sqrt_rec(nb , i + 1);
 // }
+//
 // int ft_sqrt(int nb)
 // {
 // 	if(nb < 0)

@@ -6,7 +6,7 @@
 /*   By: cypher <cypher@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/28 19:46:45 by cypher            #+#    #+#             */
-/*   Updated: 2026/07/10 02:12:27 by cypher           ###   ########.fr       */
+/*   Updated: 2026/07/13 19:43:55 by cypher           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,4 @@ void ft_putnbr(int nb)
 	if (nb >= 10)
 		ft_putnbr(nb / 10);
 	ft_putchar((nb % 10) + '0');
-}
-
-int main (void)
-{
-    ft_putnbr(42);
-    return 0 ;
 }
