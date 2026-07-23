@@ -1,29 +1,32 @@
-#include <unistd.h>
-
-int	main(int argc, char **argv)
+int atoi(const char *str)
 {
 	int i;
-	char s;
+	int sign;
+	int result;
 
-	if(argc != 2)
-	{
-		write(1,"wrong number of arguments\n",26);
-		return 0;
-	}
-
+	result = 0;
+	sign = 1;
 	i = 0;
-	while(argv[1][i])
+
+	while(str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 	{
-		s = argv[1][i];
-
-		if(s >= 'a' && s <= 'z')
-		{
-			s = 'a' + 'z' - s;
-		}
-
-		write(1,&s,1);
 		i++;
 	}
-	write(1,"\n",1);
-	return (0);
+
+	if(str[i] == '+' || str[i] == '-')
+	{
+		if(str[i] == '-')
+		{
+			sign = -1;
+		}
+		i++;
+	}
+
+	while(str[i] >= '0' && str[i] <= '9')
+	{
+		result = result * 10 + (str[i] - '0');
+		i++;
+	}
+
+	return (result * sign);
 }
